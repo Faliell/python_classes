@@ -1,6 +1,7 @@
 import tkinter as tk
 
 # Função para calcular a velocidade, a aceleração e a energia cinética
+
 def calcular():
     # Obtenção dos dados inseridos pelo usuário
     massa = float(massa_entry.get())

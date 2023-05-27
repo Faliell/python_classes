@@ -1,6 +1,9 @@
 import tkinter as tk
 
+
 # Função para calcular a velocidade, a aceleração e a energia cinética
+
+
 def calcular():
     # Obtenção dos dados inseridos pelo usuário
     massa = float(massa_entry.get())
@@ -10,7 +13,6 @@ def calcular():
     fae = float(fae_entry.get())
 
     # Cálculo da aceleração, da velocidade e da energia cinética
-
 
     if forca > 0:
         if fae >= forca:
@@ -26,11 +28,8 @@ def calcular():
             # "- fae" para andar para a esquerda
             aceleracao = (forca + fae) / massa
 
-
     velocidade = aceleracao * tempo
     energia_cinetica = 0.5 * massa * (velocidade ** 2)
-
-
 
     # Atualização dos valores nos widgets correspondentes
     aceleracao_label.configure(text=f"Aceleração: {aceleracao:.2f} m/s²")
@@ -63,7 +62,9 @@ def calcular():
         x_inicial = x
         canvas.update()
 
+
 # Criação da janela
+
 root = tk.Tk()
 root.title("Calculadora de Movimento")
 
@@ -89,7 +90,6 @@ fae_label.grid(row=4, column=0, padx=10, pady=5, sticky="w")
 fae_entry = tk.Entry(root)
 fae_entry.grid(row=4, column=1, padx=10, pady=5)
 
-
 # Criação do botão de cálculo
 calcular_button = tk.Button(root, text="Calcular", command=calcular)
 calcular_button.grid(row=5, column=1, padx=10, pady=10)
@@ -105,9 +105,8 @@ energia_cinetica_label.grid(row=8, column=0, padx=10, pady=5, sticky="w")
 
 # Criação do canvas para desenho da bola
 largura_canvas = 800
-altura_canvas = 400
+altura_canvas = 100
 canvas = tk.Canvas(root, width=largura_canvas, height=altura_canvas)
 canvas.grid(row=1, column=5, rowspan=9, padx=50, pady=50)
-
 
 root.mainloop()

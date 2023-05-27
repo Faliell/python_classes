@@ -67,7 +67,7 @@ def calcular():
 
         # Desenho da bola
         raio = 20
-        x = raio + 300
+        x = raio + 380
         y = altura_canvas - raio - 3
         bola = canvas.create_oval(x - raio, y - raio, x + raio, y + raio, fill="red", tags="bola")
 
@@ -77,7 +77,7 @@ def calcular():
         tempo_total = 0
         while x < largura_canvas - raio:
             # Cálculo da nova posição da bola
-            delta_t = 0.1
+            delta_t = 0.0038 / (velocidade * tempo)
             if forca > 0:
                 x = x_inicial + velocidade * tempo_total + 0.5 * aceleracao * (tempo_total ** 2)
             else:
@@ -140,7 +140,7 @@ velocidade_label.grid(row=7, column=0, padx=10, pady=5, sticky="w")
 energia_cinetica_label = tk.Label(root, text="Energia Cinética: ")
 energia_cinetica_label.grid(row=8, column=0, padx=10, pady=5, sticky="w")
 distancia_label = tk.Label(root, text="Distância Percorrida: ")
-distancia_label.grid(row=9, column=0, padx=10, pady=5, sticky="w")
+distancia_label.grid(row=9, column=1, padx=10, pady=5, sticky="w")
 
 # Criação do canvas para desenho da bola
 largura_canvas = 800

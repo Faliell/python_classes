@@ -2,9 +2,9 @@ import tkinter as tk
 from tkinter import messagebox
 
 
-# Função para calcular a velocidade, a aceleração e a energia cinética
 
 
+# Função para resetar valores e bola
 def reset_values():
     massa_entry.delete(0, 'end')
     forca_entry.delete(0, 'end')
@@ -13,7 +13,7 @@ def reset_values():
     fae_entry.delete(0, 'end')
     canvas.delete("bola")
 
-
+# Função de validação do input
 def validate_input(new_value):
     if new_value == "":
         return True
@@ -26,7 +26,7 @@ def validate_input(new_value):
     except ValueError:
         return False
 
-
+# Função para calcular a velocidade, a aceleração e a energia cinética
 def calcular():
     # Obtenção dos dados inseridos pelo usuário
     massa = float(massa_entry.get())
@@ -49,7 +49,7 @@ def calcular():
             if fae >= abs(forca):
                 aceleracao = 0
             else:
-                # "- fae" para andar para a esquerda
+
                 aceleracao = (forca + abs(fae)) / massa
                 print(forca, fae)
 
@@ -81,6 +81,7 @@ def calcular():
             if forca > 0:
                 x = x_inicial + velocidade * tempo_total + 0.5 * aceleracao * (tempo_total ** 2)
             else:
+                # "-" para andar para a esquerda
                 x = x_inicial - velocidade * tempo_total + 0.5 * aceleracao * (tempo_total ** 2)
             tempo_total += delta_t
 

@@ -16,6 +16,26 @@ print(number)
 # The parameter named number is a completely different entity
 # from the variable named number.
 
+#as duas var são diferentes.
+def my_function():
+    var = 2
+    print("Do I know that variable?", var)
+
+var = 1
+my_function()
+print(var)
+#agora são iguais
+def my_function1():
+    global var1
+    var1 = 2
+    print("Do I know that variable?", var1)
+
+
+var1 = 1
+my_function1()
+print(var1)
+
+
 #Positional parameter
 def my_function(a, b, c):
     print(a, b, c)

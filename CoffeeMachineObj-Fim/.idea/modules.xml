@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../CoffeeMachineObj-Fim/.idea/CoffeeMachineObj-Fim.iml" filepath="$PROJECT_DIR$/../CoffeeMachineObj-Fim/.idea/CoffeeMachineObj-Fim.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CoffeeMachineObj-Fim.iml" filepath="$PROJECT_DIR$/.idea/CoffeeMachineObj-Fim.iml" />
     </modules>
   </component>
 </project>
